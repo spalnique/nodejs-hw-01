@@ -4,7 +4,7 @@ import { PATH_DB } from '../constants/contacts.js';
 import { createFakeContact } from '../utils/createFakeContact.js';
 
 const generateContacts = async (number) => {
-  if (!number || number < 0) return;
+  if (number <= 0) return;
 
   try {
     const contacts = JSON.parse(await fs.readFile(PATH_DB));

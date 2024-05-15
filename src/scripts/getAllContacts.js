@@ -36,7 +36,7 @@ const instance = new MyContacts();
 console.log('Initial instance = ', instance);
 
 instance.setContacts = await getAllContacts();
-console.log('Instance after setting contacts:');
+console.log('Instance after setting contacts = ', instance);
 
 console.log('Quantity before update = ', instance.quantity);
 instance.updateQuantity();

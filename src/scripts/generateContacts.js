@@ -14,7 +14,7 @@ const generateContacts = async (number) => {
     }
     await fs.writeFile(PATH_DB, JSON.stringify(contacts));
   } catch (error) {
-    throw new Error(error);
+    console.log(error);
   }
 };
 

@@ -7,9 +7,10 @@ export const addOneContact = async () => {
   try {
     const contacts = JSON.parse(await fs.readFile(PATH_DB));
     const newContact = createFakeContact();
-    await fs.writeFile(PATH_DB, JSON.stringify([...contacts, newContact]));
+    contacts.push(newContact);
+    await fs.writeFile(PATH_DB, JSON.stringify(contacts));
   } catch (error) {
-    throw new Error(error.message);
+    console.log(error);
   }
 };
 
